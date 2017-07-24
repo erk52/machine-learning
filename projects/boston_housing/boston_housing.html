@@ -11927,9 +11927,12 @@ Standard deviation of prices: $165,340.28
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> RM: I would expect more rooms to correlate with higher price.  Larger houses are more expensive.
-I would expect LSTAT to correlate negatively with higher price.  Lower class neighborhoods have lower property values
-I would expect a high PTRATIO to correlate negatively with higher price.  A lower student to teacher ratio probably correlates with better schools, which correlate with higher property values, as the schools are funded by property taxes.</p>
+<p><strong>Answer: </strong></p>
+<ul>
+<li>RM: I would expect more rooms to correlate with higher price.  Larger houses are more expensive.</li>
+<li>LSTAT: I would expect LSTAT to correlate negatively with higher price.  Lower class neighborhoods have lower property values.</li>
+<li>PTRATIO: I would expect a high PTRATIO to correlate negatively with higher price.  A lower student to teacher ratio probably correlates with better schools, which correlate with higher property values, as the schools are funded by property taxes.</li>
+</ul>
 
 </div>
 </div>
@@ -12151,7 +12154,7 @@ I would expect a high PTRATIO to correlate negatively with higher price.  A lowe
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> By holding back a portion of our data, and using that to validate the model, we can see if the model is overfitting the data.</p>
+<p><strong>Answer: </strong> By holding back a portion of our data, and using that to validate the model, we can see if the model is overfitting the data.  Not using the test set until the very end makes sure that our model will generalize well, and is not 'memorizing' the training data.</p>
 
 </div>
 </div>
@@ -13276,8 +13279,8 @@ Think about the pros and cons of adding more training points based on if the tra
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> max_depth = 10
-As more training points are added, the training curve stays flat at a score of 1.0.  While the testing curve rises quickly to a score of about 0.7 and then reaches a plateau.  At this point, adding more training points does not seem to benefit the model.  Both curves have reached stable values.  The fact that the training curve is at a much higher value seems to indicate that the model is overfitting.</p>
+<p><strong>Answer: </strong> Consider max_depth = 10:</p>
+<p>As more training points are added, the training curve stays flat at a score of 1.0.  While the testing curve rises quickly to a score of about 0.7 and then reaches a plateau.  At this point, adding more training points does not seem to benefit the model.  Both curves have reached stable values.  The fact that the training curve is at a much higher score than the test curve seems to indicate that the model is overfitting.</p>
 
 </div>
 </div>
@@ -13789,7 +13792,7 @@ LHhEROQXWPCIiMgvsOAREZFfYMEjIiK/8P8BTgkLPGSojecAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> With a max depth of 1, the model is suffering from high bias.  With a max depth of 10, the model suffers from high variance.  At low depth, the lower score shows the higher bias.  At larger depth, the gap between the validation and training scores suggests higher variance.</p>
+<p><strong>Answer: </strong> With a max depth of 1, the model is suffering from high bias.  With a max depth of 10, the model suffers from high variance.  At low depth, the lower score shows the higher bias, as the model cannot capture the behavior of the data.  At larger depth, the gap between the validation and training scores suggests higher variance, as the model is memorizing the training data and does not generalize well.</p>
 
 </div>
 </div>
@@ -13848,7 +13851,7 @@ LHhEROQXWPCIiMgvsOAREZFfYMEjIiK/8P8BTgkLPGSojecAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong>Grid search is an optimization algorithm where the parameters are varied in a systematic way to minimize some function.  The 'grid' is represented by possible values of the parameters.  Grid search is simple to implement, requiring only that each parameter be varied with some step size.  For faster convergence, we can apply a gradient descent algorithm, where instead of moving in straight lines along our grid, we move in the direction of steepest descent.</p>
+<p><strong>Answer: </strong>Grid search is an optimization algorithm where the parameters are varied in a systematic way to minimize or maximize some function (e.g., minimizing total error, or maximizing R^2).  The 'grid' is represented by possible values of the parameters.  Grid search is simple to implement, requiring only that each parameter be varied with some step size.  So, we can use grid search to optimize the parameters given to our learning algorithm (e.g., we can find the max_depth of a tree that maximizes our training score).</p>
 
 </div>
 </div>
@@ -13876,7 +13879,7 @@ LHhEROQXWPCIiMgvsOAREZFfYMEjIiK/8P8BTgkLPGSojecAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> Cross-validation is used to test our model during the training phase.  The training set is partitioned into <strong>k</strong> equally sized subsets.  Of these <strong>k</strong> sets, one is held back as the validation set, and the other <strong>k-1</strong> sets are used as training sets.  This is repeated <strong>k</strong> times, choosing a different validation set each time.  By using only the training data to validate our model, we prevent any information from the test set from influencing our choice of meta-parameters.</p>
-<p>In a grid search, this randomization can prevent the model from getting stuck in a local optimum.</p>
+<p>When using a grid search, this randomization can prevent the model from getting stuck in a local optimum.</p>
 
 </div>
 </div>
@@ -14015,7 +14018,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong> Hint: </strong> The answer comes from the output of the code snipped above.</p>
-<p><strong>Answer: </strong> Optimal max_depth of 4</p>
+<p><strong>Answer: </strong> Optimal max_depth of 4, just as we observed above in question 6.</p>
 
 </div>
 </div>
@@ -14106,7 +14109,7 @@ Predicted selling price for Client 3&#39;s home: $893,760.00
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> This makes sense.  The largest house in the best neighborhood is most expensive, and the smallest in the worst neighborhood is least expensive.  All of the prices are within 3 standard deviations of the mean.</p>
+<p><strong>Answer: </strong> This makes sense.  The largest house in the best neighborhood is most expensive, and the smallest in the worst neighborhood is least expensive.  All of the prices are within 3 standard deviations of the mean, and within the range of observed data.</p>
 
 </div>
 </div>
@@ -14186,9 +14189,9 @@ Range in prices: $28,652.84
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>Using 40 year old data may introduce some error, as neighborhoods change over time.  Inflation is an issue, but as this affects all prices in the same way, it can be normalized out.</p>
-<p>More features could be considered to increase accuracy.  But the first three rules of real estate are location, location, location.  So features like a pool or new appliances may only be of secondary importance.  Though square footage may be a better size metric than number of rooms.</p>
+<p>More features could be considered to increase accuracy.  But the first three rules of real estate are location, location, location.  So features like a pool or new appliances may only be of secondary importance.  Though square footage may be a better size metric than number of rooms.  Examining some basic descriptive statistics of houses with pools or new appliances would be needed to really decide if these features are important to predicting house prices.</p>
 <p>The output of PredictTrials shows a range of $28k, which is well below the standard deviation in the data set.  The model seems robust enough to produce consistent results.</p>
-<p>As for urban vs. rural, location is of paramount importance to real estate prices.  The same house in Boston would sell for much less in rural Iowa.</p>
+<p>As for urban vs. rural, location is of paramount importance to real estate prices.  The same house in Boston would sell for much less in rural Iowa.  If you want to predict housing costs in a different market, you should have data from that market.  The trends may be the same (e.g., larger houses are more expensive) but the absolute values will likely be different.</p>
 <p>Using the characteristics of the neighborhood is a good, first order estimate of the price of an individual home.  The characteristics of the individual house will also be important, but the price is unlikey to vary wildy from its neighbors.</p>
 
 </div>
