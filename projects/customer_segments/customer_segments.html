@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># Import libraries necessary for this project</span>
@@ -11834,7 +11834,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># Display a description of the dataset</span>
@@ -11961,7 +11961,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[118]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12043,6 +12043,131 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">delta_mean</span> <span class="o">=</span> <span class="n">samples</span> <span class="o">-</span> <span class="n">data</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">()</span>
+<span class="n">delta_median</span> <span class="o">=</span> <span class="n">samples</span> <span class="o">-</span> <span class="n">data</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">round</span><span class="p">()</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">delta_mean</span><span class="p">,</span> <span class="n">delta_median</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5546</td>
+      <td>-1277</td>
+      <td>-3349</td>
+      <td>-2006</td>
+      <td>-622</td>
+      <td>599</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5160</td>
+      <td>-4596</td>
+      <td>-4539</td>
+      <td>-655</td>
+      <td>-2707</td>
+      <td>-389</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-8903</td>
+      <td>-1566</td>
+      <td>8532</td>
+      <td>-2497</td>
+      <td>-2640</td>
+      <td>555</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>9042</td>
+      <td>892</td>
+      <td>-154</td>
+      <td>-460</td>
+      <td>1443</td>
+      <td>1158</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8656</td>
+      <td>-2427</td>
+      <td>-1344</td>
+      <td>891</td>
+      <td>-642</td>
+      <td>170</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-5407</td>
+      <td>603</td>
+      <td>11727</td>
+      <td>-951</td>
+      <td>-575</td>
+      <td>1114</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -12060,7 +12185,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> To better understand the sample points, I compare them to the mean and median for the overall data.</p>
 <ul>
 <li>Sample 0: High Fresh, Detergents_Paper, Deli, low Frozen and Milk.  Lots of paper products, could be a retail establishment?</li>
 <li>Sample 1: High Fresh, Frozen, low Milk Detergents_Paper, Deli.  Needing both fresh and frozen, but less paper and milk.  Maybe a cafe of some kind?</li>
@@ -12092,7 +12217,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="n">FEAT</span> <span class="o">=</span> <span class="s">&#39;Fresh&#39;</span>
@@ -12122,7 +12247,7 @@ div#notebook {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Fitting Fresh with score: -0.238080
+<pre>Fitting Fresh with score: -0.212466
 </pre>
 </div>
 </div>
@@ -12164,7 +12289,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># Produce a scatter matrix for each pair of features in the data</span>
@@ -13805,7 +13930,7 @@ Hryx5DiO4ziO4ziOkwdvLDmO4ziO4ziO4+TBG0uO4ziO4ziO4zh58MaS4ziO4ziO4zhOHv4/kpeX
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># TODO: Scale the data using the natural logarithm</span>
@@ -17004,7 +17129,7 @@ acP/BwiSef+7GuLFAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># Display the log-transformed sample data</span>
@@ -17095,7 +17220,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># For each feature find the data points with extreme high or low values</span>
@@ -17756,7 +17881,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c">#What difference did removing the outliers make?</span>
@@ -17771,7 +17896,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[107]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -17886,7 +18011,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Three data points are outliers for two features, and one data point is an outlier for three features.  I chose to remove the points that are outliers in one or more features.  This slightuly decreases the variance in each feature.  Since we are going to move on to PCA, which chooses new components based on the greatest variance, we don't want any features to have higher variance caused by large outliers.</p>
+<p><strong>Answer:</strong> Four data points are outliers for two features, and one data point is an outlier for three features.  I chose to remove the points that are outliers in one or more features.  This slightuly decreases the variance in each feature.  Since we are going to move on to PCA, which chooses new components based on the greatest variance, we don't want any features to have higher variance caused by large outliers.</p>
 <p>After completing the analysis for this project, I came back and tried it again with no outliers removed, and with all outliers removed, and found that this choice did not significantly impact the conclusions.</p>
 
 </div>
@@ -17919,7 +18044,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># TODO: Apply PCA by fitting the good data with the same number of dimensions as features</span>
@@ -18308,18 +18433,53 @@ RSIiIiIiEtXUKBIRERERkaj2/+DMUiDZDBcIAAAAAElFTkSuQmCC
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">pca_results</span><span class="p">[</span><span class="s">&#39;Explained Variance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Dimension 1    0.4430
+Dimension 2    0.7068
+Dimension 3    0.8299
+Dimension 4    0.9311
+Dimension 5    0.9796
+Dimension 6    1.0000
+Name: Explained Variance, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> The first two components explain 72% of the variance.  The first four principal components explain 93% of the variance.</p>
-<p>The first dimension represents a combination of high Milk, Grocery and Detergents_Paper, and low Fresh and Frozen.</p>
-<p>The second dimension represents high Fresh, Frozen and Delicatessen.</p>
-<p>The third represents low Fresh and high Delicatessen.</p>
-<p>THe fourth represents high Frozen and low Delicatessen.</p>
-<p>The fifth represents low Milk and Grocery, and high Detergents_Paper</p>
-<p>The sixth represents high Milk and Detergents_Paper, and low Grocery.</p>
+<p><strong>Answer:</strong> The first two components explain 70.7% of the variance.  The first four principal components explain 93.1% of the variance.</p>
+<p>The first dimension represents a combination of positive Milk, Grocery and Detergents_Paper, and negative Fresh and Frozen.  This could represent household staples often purchased together.</p>
+<p>The second dimension represents high positive Fresh, Frozen and Delicatessen.  This could represent a combination of fresh and frozen ingredients needed at a restaurant.</p>
+<p>The third represents negative Fresh and positive Delicatessen.</p>
+<p>THe fourth represents high positive Frozen and negative Delicatessen.</p>
+<p>The fifth represents negative Milk and Grocery, and positive Detergents_Paper</p>
+<p>The sixth represents positive Milk and Detergents_Paper, and negative Grocery.</p>
 
 </div>
 </div>
@@ -18336,7 +18496,7 @@ RSIiIiIiEtXUKBIRERERkaj2/+DMUiDZDBcIAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># Display sample log-data after having a PCA transformation applied</span>
@@ -18926,7 +19086,7 @@ RSIiIiIiEtXUKBIRERERkaj2/+DMUiDZDBcIAAAAAElFTkSuQmCC
 
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[73]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -19044,7 +19204,7 @@ RSIiIiIiEtXUKBIRERERkaj2/+DMUiDZDBcIAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[110]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
@@ -19078,7 +19238,7 @@ RSIiIiIiEtXUKBIRERERkaj2/+DMUiDZDBcIAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -19129,7 +19289,7 @@ RSIiIiIiEtXUKBIRERERkaj2/+DMUiDZDBcIAAAAAElFTkSuQmCC
 
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[111]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -19206,7 +19366,7 @@ RSIiIiIiEtXUKBIRERERkaj2/+DMUiDZDBcIAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># Create a biplot</span>
@@ -19221,11 +19381,11 @@ RSIiIiIiEtXUKBIRERERkaj2/+DMUiDZDBcIAAAAAElFTkSuQmCC
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[112]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x8f78cf8&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0xaa55a58&gt;</pre>
 </div>
 
 </div>
@@ -20329,7 +20489,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># TODO: Apply your clustering algorithm of choice to the reduced data</span>
@@ -20396,7 +20556,7 @@ SUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># Display the results of the clustering from implementation</span>
@@ -21190,7 +21350,7 @@ kiSpeQYfSZIkSc37f78r4hHcTSTBAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># TODO: Inverse transform the centers</span>
@@ -21260,6 +21420,68 @@ kiSpeQYfSZIkSc37f78r4hHcTSTBAAAAAElFTkSuQmCC
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="p">(</span><span class="n">true_centers</span> <span class="o">-</span> <span class="n">data</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[52]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Segment 0</th>
+      <td>308</td>
+      <td>-1575</td>
+      <td>-2066.5</td>
+      <td>532</td>
+      <td>-479.5</td>
+      <td>-253.5</td>
+    </tr>
+    <tr>
+      <th>Segment 1</th>
+      <td>-4188</td>
+      <td>2720</td>
+      <td>4799.5</td>
+      <td>-490</td>
+      <td>2229.5</td>
+      <td>-20.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -21276,7 +21498,12 @@ kiSpeQYfSZIkSc37f78r4hHcTSTBAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Segment 0 is associated wtih more Fresh and Frozen items, which suggest that it is some sort of restaurant.  Segment 1 is associated with much higher Detergents_Paper, Grocery and Milk.  This segment seems more like a retail or grocery store.</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>Segment 0 is associated with more Fresh and Frozen items than the median of all data points. This suggests that it is some sort of restaurant.  </li>
+<li>Segment 1 is associated with much higher Detergents_Paper, Grocery and Milk than the median.  This segment seems more like a retail or grocery store.</li>
+</ul>
+<p>The amounts of Detergents_Paper and Grocery seem to be a major factor in separating the centers of the two segments.</p>
 
 </div>
 </div>
@@ -21294,12 +21521,13 @@ kiSpeQYfSZIkSc37f78r4hHcTSTBAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># Display the predictions</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">pred</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sample_preds</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s">&quot;Sample point&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s">&quot;predicted to be in Cluster&quot;</span><span class="p">,</span> <span class="n">pred</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -21312,11 +21540,118 @@ kiSpeQYfSZIkSc37f78r4hHcTSTBAAAAAElFTkSuQmCC
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Sample point 0 predicted to be in Cluster 0
-Sample point 1 predicted to be in Cluster 1
-Sample point 2 predicted to be in Cluster 1
+<pre>Sample point 0 predicted to be in Cluster 1
+Sample point 1 predicted to be in Cluster 0
+Sample point 2 predicted to be in Cluster 0
 </pre>
 </div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>17546</td>
+      <td>4519</td>
+      <td>4602</td>
+      <td>1066</td>
+      <td>2259</td>
+      <td>2124</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>17160</td>
+      <td>1200</td>
+      <td>3412</td>
+      <td>2417</td>
+      <td>174</td>
+      <td>1136</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3097</td>
+      <td>4230</td>
+      <td>16483</td>
+      <td>575</td>
+      <td>241</td>
+      <td>2080</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">display</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;Sample 0&#39;</span><span class="p">,</span> <span class="s">&#39;Sample 1&#39;</span><span class="p">,</span> <span class="s">&#39;Sample 2&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;Segment-0&#39;</span><span class="p">,</span> <span class="s">&#39;Segment-1&#39;</span><span class="p">],</span>
+                     <span class="n">data</span><span class="o">=</span><span class="n">clusterer</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">pca_samples</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Segment-0</th>
+      <th>Segment-1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Sample 0</th>
+      <td>0.444968</td>
+      <td>0.555032</td>
+    </tr>
+    <tr>
+      <th>Sample 1</th>
+      <td>0.959609</td>
+      <td>0.040391</td>
+    </tr>
+    <tr>
+      <th>Sample 2</th>
+      <td>0.667093</td>
+      <td>0.332907</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
 </div>
 
 </div>
@@ -21328,7 +21663,15 @@ Sample point 2 predicted to be in Cluster 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Sample 0 belongs to segment 0, which I tentatively identify as a grocery store or retail establishemnt, while Sample 1 and 2 belong to the 'restaurant' segment, similar to guesses made in Question 1.</p>
+<p><strong>Answer:</strong></p>
+<ul>
+<li><p>Sample 0 belongs to segment 1, which I tentatively identify as a grocery store or retail establishment.  It shows higher Detergents_Paper and Milk, similar to the center of Segment 1.  Though it also shows high Fresh, associated with segment 0.  The assignment to segment 1 only has a probability of 55.5%, showing that this point is ear the boundary between the two classes.</p>
+</li>
+<li><p>Sample 1 is assigned to segment 0 (restaurant), and shows low Detergents_Paper, very low Grocery and Milk, and high Fresh and Frozen.  This assignment has 96% probability, and is clearly inside the Segment 0 cluster.</p>
+</li>
+<li><p>Sample 2 is also assigned to segment 0, and shows low Detergents_Paper characteristic of segment 0.  It also shows low Fresh and high grocery, which are unusal for the segment.  This assignment has a probability of 66.7%, as the point is somewhat near the boundary between the two classes.</p>
+</li>
+</ul>
 
 </div>
 </div>
