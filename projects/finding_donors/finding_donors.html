@@ -14047,7 +14047,7 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> The support vector classifier is showing the highest F score on the testing set, but only by a small margin.  And SVC requires significantly longer training time.  K-Nearest Neighbors takes a very long time to predict values, especially as the number of data points goes up, and gives the worst F-score.  I would recommend using the Random Forest Classifier.  It is very fast to train and predict, gives a good F-score, and since many of the data features are categorical, it makes intuitive sense to me to use decision trees to classify the data.</p>
+<p><strong>Answer: </strong> All three methods produce similar accuracy and F-scores on the training set, so any method could be used.  The support vector classifier is showing the highest F score on the testing set, but only by a small margin.  And SVC requires significantly longer training time.  K-Nearest Neighbors takes a very long time to predict values, especially as the number of data points goes up, and gives the worst F-score.  I would recommend using the Random Forest Classifier.  It is very fast to train and predict, and gives a good F-score.  As an ensemble method, the Random Forest is less sensitive to outliers or noise in the data.  We can also extract feature importances from the Random Forest model, which may give us more insight into the data.  Interpreting the weights assigned to features in the SVC model is not as simple.</p>
 
 </div>
 </div>
@@ -14073,6 +14073,7 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong> A decision tree is a simple model that asks a series of yes/no questions about a data point, and then determines a classification based on the answers to those questions. When constructing a tree, the questions are chosen to split the data most efficiently into separate classes.  Like a game of 20 questions, a decision tree can classify a data point after asking the right questions about it.</p>
 <p>A random forest is a collection of decision trees.  Each tree is constructed using a randomly selected subset of the data. Then, in order to predict the class of a new data point, the result of each decision tree is averaged together.</p>
+<p>A single decision tree can be affected by 'noise' in the data set, or may try to simply memorize its set of training data.  But an ensemble of trees will average out these mistakes made by individual trees while maintaining the good predictions.</p>
 
 </div>
 </div>
